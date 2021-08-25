@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css" integrity="sha512-y6ZMKFUQrn+UUEVoqYe8ApScqbjuhjqzTuwUMEGMDuhS2niI8KA3vhH2LenreqJXQS+iIXVTRL2iaNfJbDNA1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    
+    <main class="container mx-auto lg:w-4/5">
+        <div class="w-full bg-white rounded-xl shadow-xl p-8">
+            <div id="articleContainer"></div>
+            <!-- <div class="flex items-center">
+                <img class="w-16 h-16 rounded-full" src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png" alt="">
+                <div class="ml-4">
+                    <h1 class="font-bold text-gray-700 text-2xl">Fullname</h1>
+                    <p class="text-gray-400 text-sm">2021-08-11</p>
+                </div>
+            </div>
+            <div class="mt-6">
+                <h1 class="font-bold text-xl mb-2 text-gray-700">
+                    Title
+                </h1>
+                <p class="text-gray-800 text-lg text-justify">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, distinctio ab illo obcaecati facilis magnam magni excepturi perferendis consequuntur aliquam suscipit aperiam dolorum eaque itaque est quos nesciunt impedit laboriosam!
+                    Magnam esse fugiat debitis, provident repudiandae molestiae fugit delectus est nisi, repellendus cum! Repellendus quod possimus doloremque corporis. Officiis sit rem quaerat dolor. Laboriosam doloremque tempore consequatur praesentium porro facilis?
+                    Repudiandae quia natus eum nihil provident, quisquam illo amet nostrum laboriosam possimus, voluptatibus voluptates accusamus deleniti fuga temporibus! Hic optio facilis aliquam similique! Corrupti voluptas neque, voluptate perspiciatis harum quam.
+                    Rerum, pariatur? Doloremque quas itaque accusantium repudiandae sequi quisquam necessitatibus nulla eveniet enim quod optio numquam, vero modi accusamus magni tempore libero aspernatur quaerat explicabo obcaecati velit, hic totam? Quo?
+                    Asperiores ullam, laudantium a mollitia numquam in? Expedita omnis excepturi incidunt perspiciatis nihil inventore laudantium deserunt molestiae odio quidem earum cum vero, necessitatibus provident tempore suscipit veritatis quos dolores optio!
+                    Saepe, eveniet? Rerum, nesciunt? Eveniet odit dolores impedit saepe sapiente magni. Consectetur sunt, odit alias et commodi quaerat facilis blanditiis sit est? Sunt fugit provident facilis, aspernatur sint repellat. Dolorem!
+                    Ducimus, natus quod libero quam consectetur adipisci, aut ex corporis voluptas incidunt deserunt odit officia, facere neque vero pariatur dolorem minus id! Deserunt maxime modi architecto fugiat commodi deleniti esse!
+                    Provident sint a repellat sequi vitae expedita, iure neque sit fuga excepturi voluptatibus minus enim ea temporibus. Dolore voluptatibus amet eum dolorum. Libero ut quam harum doloribus nam necessitatibus id!
+                </p>
+            </div> -->
+
+            <form class="w-full flex flex-col mt-8">
+                <label class="text-gray-700 font-bold text-xl mb-2" for="commentInput">Сэтгэгдэл үлдээх</label>
+                <div class="w-full flex items-center">
+                    <input class="bg-gray-200 w-full focus:outline-none py-3 px-4 rounded-l-3xl" placeholder="Сэтгэгдэл бичих" id="commentInput" type="text">
+                    <button id="writeComment" class="bg-gray-200 text-gray-700 rounded-r-3xl py-3 px-4">
+                        <i class="far fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="w-full mt-8">
+                <div id="commentContainer" class="w-full">
+                    <!-- <div class="flex items-start p-4 rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 rounded-full" src="https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png" alt="">
+                        <div class="ml-4 w-full">
+                            <h1 class="font-bold text-gray-700">Fullname</h1>
+                            <div class="rounded-xl bg-gray-200 w-full p-4">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quae soluta, a minima, enim ad aliquam ab quo hic labore saepe fugit, molestias excepturi ea repudiandae quia deleniti nostrum amet.</p>
+                            </div>
+                            <div class="flex text-xs">
+                                <p class="font-bold mr-2 cursor-pointer text-blue-500">Like</p>
+                                <p class="font-bold mr-2 cursor-pointer text-blue-500">Reply</p>
+                                <p class="font-bold text-gray-600">2021/08/21, 20:21</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        const commentInput = document.querySelector('#commentInput');
+        const writeComment = document.querySelector('#writeComment');
+        const articleContainer = document.querySelector('#articleContainer');
+        const commentContainer = document.querySelector('#commentContainer')
+
+        let article, formValid, user, users;
+        
+        function init(){
+            if(localStorage['currentArticle']){
+                article = JSON.parse(localStorage['currentArticle'])
+            }
+            
+            if(localStorage['currentUser']){
+                user = JSON.parse(localStorage['currentUser']);
+            }
+
+            if(localStorage['users']){
+                users = JSON.parse(localStorage['users'])
+            }
+
+            if(localStorage['comments']){
+                comments = JSON.parse(localStorage['comments'])
+            } else {
+                comments = [];
+            }
+
+            displayArticle(article);
+            displayComments(comments)
+        }
+
+        function displayArticle(niitlel){
+            articleContainer.innerHTML = "";
+            const articleOwner = users.find(user => user.id === article.userId);
+            articleContainer.insertAdjacentHTML('afterbegin', `
+                <div class="flex items-center">
+                    <img class="w-16 h-16 rounded-full" src="${articleOwner.avatar}" alt="">
+                    <div class="ml-4">
+                        <h1 class="font-bold text-gray-700 text-2xl">${articleOwner.fullname}</h1>
+                        <p class="text-gray-400 text-sm">${niitlel.created.date}</p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <h1 class="font-bold text-xl mb-2 text-gray-700">
+                        ${article.title}
+                    </h1>
+                    <p class="text-gray-800 text-lg text-justify">
+                        ${article.body}
+                    </p>
+                </div>
+            `)
+        }
+
+        function displayComments(setgegdel){
+            commentContainer.innerHTML = "";
+            const currentSetgegdel = setgegdel.filter(el => el.postId === article.id);
+            currentSetgegdel.forEach(comm => {
+                const commentUser = users.find(el => el.id === comm.userId);
+                commentContainer.insertAdjacentHTML('afterbegin', `
+                    <div class="flex items-start p-4 mb-4 rounded-xl border border-gray-300">
+                        <img class="w-12 h-12 rounded-full" src="${commentUser.avatar}" alt="">
+                        <div class="ml-4 w-full">
+                            <h1 class="font-bold text-gray-700">${commentUser.fullname}</h1>
+                            <div class="rounded-xl bg-gray-200 w-full p-4">
+                                <p>${comm.text}</p>
+                            </div>
+                            <div class="flex text-xs">
+                                <p class="font-bold mr-2 cursor-pointer text-blue-500">Like</p>
+                                <p class="font-bold mr-2 cursor-pointer text-blue-500">Reply</p>
+                                <p class="font-bold text-gray-600">${comm.created.date}, ${comm.created.time}</p>
+                            </div>
+                        </div>
+                    </div>
+                `)
+            })
+        }
+
+        init();
+
+        class Comment {
+            constructor(text, userId, postId){
+                this.text = text;
+                this.userId = userId;
+                this.postId = postId;
+                this.created = {
+                    date: new Date().toLocaleDateString(),
+                    time: new Date().toLocaleTimeString()
+                };
+                this.id = +Math.random().toString().split('.')[1];
+            }
+        }
+
+        writeComment.addEventListener('click', e => {
+            e.preventDefault();
+            checkForm(commentInput.value !== "");
+            if(formValid){
+                const comment = new Comment(commentInput.value, user.id, article.id);
+                comments.push(comment);
+                localStorage.setItem('comments', JSON.stringify(comments));
+                resetForm();
+                displayComments(comments);
+            }
+        });
+
+        function checkForm(valid){
+            if(!valid){
+                swal({
+                    icon: "warning",
+                    text: "Хоосон байна"
+                });
+                formValid = false
+            } else {
+                formValid = true
+            }
+        }
+
+        function resetForm(){
+            commentInput.value = ''
+        }
+    </script>
+</body>
+</html>

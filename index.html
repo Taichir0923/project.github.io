@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css" integrity="sha512-y6ZMKFUQrn+UUEVoqYe8ApScqbjuhjqzTuwUMEGMDuhS2niI8KA3vhH2LenreqJXQS+iIXVTRL2iaNfJbDNA1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="w-full min-h-screen flex flex-col justify-center items-start">
+        <form class="mx-auto bg-white py-4 px-6 rounded-xl shadow-xl w-4/5 sm:w-3/5 md:w-2/5 xl:w-1/5 flex flex-col">
+            <label class="font-bold" for="fullname">Овог нэр</label>
+            <input class="py-2 mb-4 px-4 border border-green-400 focus:outline-none rounded-md main" placeholder="Овог нэр" id="fullname" type="text">
+
+            <label class="font-bold" for="email">Имэйл</label>
+            <input class="py-2 mb-4 px-4 border border-green-400 focus:outline-none rounded-md main" placeholder="Имэйл" id="email" type="text">
+
+            <label class="font-bold" for="number">Утасны дугаар</label>
+            <input class="py-2 mb-4 px-4 border border-green-400 focus:outline-none rounded-md main" placeholder="Утасны дугаар" id="number" type="number">
+
+            <label class="font-bold" for="dob">Төрсөн он сар өдөр</label>
+            <input class="py-2 mb-4 px-4 border border-green-400 focus:outline-none rounded-md main" id="dob" type="date">
+
+            <label class="font-bold" for="avatar">Зураг оруулах</label>
+            <input class="py-2 mb-4 px-4 border border-green-400 focus:outline-none rounded-md main" placeholder="Зураг оруулах" id="avatar" type="text">
+
+            <label class="font-bold" for="address">Гэрийн хаяг</label>
+            <textarea class="py-2 mb-4 px-4 border border-green-400 focus:outline-none rounded-md main" placeholder="Гэрийн хаяг" id="address" rows="3" type="text"></textarea>
+
+            <label class="font-bold" for="password">Нууц үг оруулах</label>
+            <input class="py-2 mb-4 px-4 border border-green-400 focus:outline-none rounded-md main" placeholder="Нууц үг оруулах" id="password" type="password">
+
+            <label class="font-bold" for="passwordConfirm">Нууц үг давтах</label>
+            <input class="py-2 mb-4 px-4 border border-green-400 focus:outline-none rounded-md main" placeholder="Нууц үг давтах" id="passwordConfirm" type="password">
+
+            <div class="flex justify-end">
+                <p class="text-green-400 mb-4 font-bold">
+                    <a href="./login.html">Нэвтрэх</a>
+                </p>
+            </div>
+
+            <input class="py-2 mb-4 px-4 border font-bold cursor-pointer border-green-400 bg-green-400 text-white focus:outline-none rounded-md" id="register" type="submit" value="Бүртгүүлэх">
+        </form>
+
+        <div class="mx-auto mt-8 w-4/5 sm:w-3/5 md:w-2/5 xl:w-1/5">
+            <p class="checkPass text-gray-500">Жижиг үсэг байх ёстой</p>
+            <p class="checkPass text-gray-500">Том үсэг байх ёстой</p>
+            <p class="checkPass text-gray-500">Тоо орсон байх ёстой</p>
+            <p class="checkPass text-gray-500">Тэмдэгт орсон байх ёстой</p>
+            <p class="checkPass text-gray-500">Хамгийн багадаа 8 элемент байх ёстой</p>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
