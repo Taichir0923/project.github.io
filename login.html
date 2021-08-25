@@ -39,7 +39,7 @@
         let users = [];
 
         if(localStorage['currentUser']){
-            location.href = "http://127.0.0.1:5500/account.html"
+            location.href = "./account.html"
         }
 
         function getDataFromLocal(){
@@ -62,7 +62,7 @@
 
             if(currentUser.password === password.value){
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
-                location.href = "http://127.0.0.1:5500/account.html"
+                location.href = "./account.html"
             } else {
                 swal({
                     title: "Алдаа гарлаа",

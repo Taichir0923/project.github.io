@@ -89,7 +89,7 @@
         let user, validForm;
         let articles = [];
         if(!localStorage['currentUser']){
-            location.href = "http://127.0.0.1:5500/login.html"
+            location.href = "./login.html"
         }
 
         function init(){
@@ -192,13 +192,13 @@
                 const articleId = +e.target.nextElementSibling.nextElementSibling.value;
                 const currentArticle = articles.find(el => el.id === articleId);
                 localStorage.setItem('currentArticle', JSON.stringify(currentArticle))
-                location.href = "http://127.0.0.1:5500/article.html";
+                location.href = "./article.html";
             }
         })
 
         logout.addEventListener('click', () => {
             localStorage.removeItem('currentUser')
-            location.href = "http://127.0.0.1:5500/login.html";
+            location.href = "./login.html";
         })
     </script>
 </body>
